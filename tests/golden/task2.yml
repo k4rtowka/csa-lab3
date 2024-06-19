@@ -1,0 +1,230 @@
+in_source: |-
+  _start:
+      read R1
+      print R1
+      jmz end
+      jump _start
+  end:
+      exit
+in_stdin: |-
+  Alisa
+out_code: |-
+  [
+  	[
+  	{"opcode": "read", "args": ["R1"], "arg_type": "no_op", "term": "_start:read R1"},
+  	{"opcode": "print", "args": ["R1"], "arg_type": "no_op", "term": "print R1"},
+  	{"opcode": "jmz", "args": [4], "arg_type": "no_op", "term": "jmz end"},
+  	{"opcode": "jump", "args": [0], "arg_type": "no_op", "term": "jump _start"},
+  	{"opcode": "exit", "args": [], "arg_type": "no_op", "term": "end:exit"}
+  	],
+  	 0
+  ]
+out_stdout: |
+  Alisa 
+  instr_counter: 204
+  
+out_log: |
+  DEBUG   data_path:__print__     exec_instruction:    1 | AR:   0 | AR_NEW   0 | Z: 0 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE:     
+  DEBUG   data_path:__print__     exec_instruction:    2 | AR:   0 | AR_NEW   0 | Z: 0 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE:     
+  DEBUG   data_path:__print__     exec_instruction:    3 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE:     
+  DEBUG   data_path:__print__     exec_instruction:    4 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE:     
+  DEBUG   data_path:__print__     exec_instruction:    5 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:    6 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:    8 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:    8 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:    9 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   10 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   11 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   12 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   13 | AR:   1 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   14 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   15 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   16 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   17 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   18 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   20 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   20 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   21 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   22 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   23 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   24 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   25 | AR:   2 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   26 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   27 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   28 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:   29 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:   30 | AR:   3 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:   31 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:   32 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:   33 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:   34 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:   35 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:   36 | AR:   0 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:   37 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:   38 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:   39 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   40 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   42 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   42 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  65 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   43 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   44 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   45 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   46 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   47 | AR:   1 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   48 | AR:   1 | AR_NEW   2 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   49 | AR:   1 | AR_NEW   2 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   50 | AR:   1 | AR_NEW   2 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   51 | AR:   1 | AR_NEW   2 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   52 | AR:   1 | AR_NEW   2 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   54 | AR:   1 | AR_NEW   2 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   54 | AR:   1 | AR_NEW   2 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   55 | AR:   1 | AR_NEW   2 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   56 | AR:   1 | AR_NEW   2 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   57 | AR:   1 | AR_NEW   2 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   58 | AR:   1 | AR_NEW   2 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   59 | AR:   2 | AR_NEW   2 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   60 | AR:   2 | AR_NEW   3 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   61 | AR:   2 | AR_NEW   3 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   62 | AR:   2 | AR_NEW   3 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:   63 | AR:   2 | AR_NEW   3 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:   64 | AR:   3 | AR_NEW   3 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:   65 | AR:   3 | AR_NEW   4 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:   66 | AR:   3 | AR_NEW   4 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:   67 | AR:   3 | AR_NEW   4 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:   68 | AR:   3 | AR_NEW   4 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:   69 | AR:   3 | AR_NEW   4 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:   70 | AR:   0 | AR_NEW   4 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:   71 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:   72 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:   73 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   74 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   76 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   76 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1: 108 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   77 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   78 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   79 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   80 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   81 | AR:   1 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   82 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   83 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:   84 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   85 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   86 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   88 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   88 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   89 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   90 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   91 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   92 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   93 | AR:   2 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   94 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   95 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:   96 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:   97 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:   98 | AR:   3 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:   99 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  100 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  101 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  102 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  103 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  104 | AR:   0 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  105 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  106 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  107 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  108 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  110 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  110 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 105 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  111 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  112 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  113 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  114 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  115 | AR:   1 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  116 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  117 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  118 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  119 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  120 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  122 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  122 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  123 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  124 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  125 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  126 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  127 | AR:   2 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  128 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  129 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  130 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  131 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  132 | AR:   3 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  133 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  134 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  135 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  136 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  137 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  138 | AR:   0 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  139 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  140 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  141 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  142 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  144 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  144 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1: 115 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  145 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  146 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  147 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  148 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  149 | AR:   1 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  150 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  151 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  152 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  153 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  154 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  156 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  156 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  157 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  158 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  159 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  160 | AR:   1 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  161 | AR:   2 | AR_NEW   2 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  162 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  163 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  164 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  165 | AR:   2 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  166 | AR:   3 | AR_NEW   3 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  167 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  168 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  169 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  170 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  171 | AR:   3 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  172 | AR:   0 | AR_NEW   4 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  173 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  174 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: jump
+  DEBUG   data_path:__print__     exec_instruction:  175 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  176 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  178 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:  97 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  179 | AR:   0 | AR_NEW   1 | Z: 0 | O: 1 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  180 | AR:   0 | AR_NEW   1 | Z: 0 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  181 | AR:   0 | AR_NEW   1 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  182 | AR:   0 | AR_NEW   1 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  183 | AR:   1 | AR_NEW   1 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  184 | AR:   1 | AR_NEW   2 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  185 | AR:   1 | AR_NEW   2 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: read
+  DEBUG   data_path:__print__     exec_instruction:  186 | AR:   1 | AR_NEW   2 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  187 | AR:   1 | AR_NEW   2 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  188 | AR:   1 | AR_NEW   2 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  190 | AR:   1 | AR_NEW   2 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  190 | AR:   1 | AR_NEW   2 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  191 | AR:   1 | AR_NEW   2 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  192 | AR:   1 | AR_NEW   2 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  193 | AR:   1 | AR_NEW   2 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  194 | AR:   1 | AR_NEW   2 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  195 | AR:   2 | AR_NEW   2 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  196 | AR:   2 | AR_NEW   3 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  197 | AR:   2 | AR_NEW   3 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: print
+  DEBUG   data_path:__print__     exec_instruction:  198 | AR:   2 | AR_NEW   3 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  199 | AR:   2 | AR_NEW   3 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  200 | AR:   2 | AR_NEW   3 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  201 | AR:   4 | AR_NEW   3 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  202 | AR:   4 | AR_NEW   5 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  203 | AR:   4 | AR_NEW   5 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: jmz 
+  DEBUG   data_path:__print__     exec_instruction:  204 | AR:   4 | AR_NEW   5 | Z: 1 | O: 0 | r0:   0 | r1:   0 | r2:   0 | r3:   0 | OPCODE: exit
+  
