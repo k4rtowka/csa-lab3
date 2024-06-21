@@ -12,7 +12,7 @@ class EmptyBufferError(Exception):
 class DataPath:
     reg_file = None
     reg_dr = None
-    reg_addr_new = None
+    reg_pc = None
     reg_addr = None
     flag_z = None
     flag_o = None
@@ -57,7 +57,7 @@ class DataPath:
 
         self.reg_file = [0] * 4
         self.reg_dr = 0
-        self.reg_addr_new = 0
+        self.reg_pc = 0
         self.reg_addr = 0
         self.flag_z = 0
         self.flag_o = 0
@@ -74,7 +74,7 @@ class DataPath:
             "from_MUX_left": [0, 0, 0, 0],
             "from_MUX_right": [0, 0, 0, 0],
             "from_reg_dr": self.reg_dr,
-            "from_reg_addr_new": self.reg_addr_new,
+            "from_reg_addr_new": self.reg_pc,
             "from_reg_addr": self.reg_addr,
             "from_alu": 0,
             "alu_to_z": self.flag_z,
@@ -141,11 +141,11 @@ class DataPath:
         self.signals_dict["from_MUX_alu"][1] = self.reg_dr
         self.__print__()
 
-    def latch_reg_addr_new_signal(self):
+    def latch_reg_pc_signal(self):
         self.instruction_count += 1
-        self.reg_addr_new = self.signals_dict["from_reg_addr"] + 1
-        self.signals_dict["from_reg_addr_new"] = self.reg_addr_new
-        self.signals_dict["from_MUX_addr"][1] = self.reg_addr_new
+        self.reg_pc = self.signals_dict["from_reg_addr"] + 1
+        self.signals_dict["from_reg_addr_new"] = self.reg_pc
+        self.signals_dict["from_MUX_addr"][1] = self.reg_pc
         self.__print__()
 
     def latch_flag_z_signal(self):
@@ -258,7 +258,7 @@ class DataPath:
         ).format(
             self.instruction_count,
             self.reg_addr,
-            self.reg_addr_new,
+            self.reg_pc,
             self.flag_z,
             self.flag_o,
             self.reg_file[0],

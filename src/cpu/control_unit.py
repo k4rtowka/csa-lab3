@@ -1,3 +1,5 @@
+import logging
+
 from cpu.data_path import DataPath
 from cpu.isa import Address, Opcode
 
@@ -20,6 +22,9 @@ class ControlUnit:
         dp = self.dp
         dp.load_program(self.source_name)
         while True:
+            if dp.instruction_count > 50000:
+                logging.warning("Limit exceeded!")
+                raise ExitError()
             self.choose_command(dp)
             dr = dp.signals_dict["from_reg_dr"]
             args = dr["args"]
@@ -68,7 +73,7 @@ class ControlUnit:
 
     def choose_command(self, dp):
         dp.latch_reg_addr_signal()
-        dp.latch_reg_addr_new_signal()
+        dp.latch_reg_pc_signal()
         dp.load_from_mem()
         dp.latch_reg_dr_signal()
 

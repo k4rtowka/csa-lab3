@@ -94,7 +94,7 @@ def stage_end(file_name):
     return memory
 
 
-def translate_asm_to_me(source_name, target_name):
+def translate(source_name, target_name):
     memory = stage_end(source_name)
     json_text = json.dumps([memory, marks["_start"]])
 
@@ -106,7 +106,7 @@ def translate_asm_to_me(source_name, target_name):
 
 
 def main(source_file, target_file):
-    translate_asm_to_me(source_file, target_file)
+    translate(source_file, target_file)
 
 
 if __name__ == "__main__":
